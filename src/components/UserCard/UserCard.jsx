@@ -8,9 +8,9 @@ import PropTypes from "prop-types";
 
 import css from "./UserCard.module.css";
 
-// const formatFollowers = (number) => {
-//   return String(number).
-// }
+const formatFollowers = (number) => {
+  return String(number).replace(/\B(?=(\d{3})+(?!\d))/g, ",")
+}
 
 export const UserCard = ({ user: { id, user, tweets, followers, avatar } }) => {
   const dispatch = useDispatch();
@@ -32,7 +32,7 @@ export const UserCard = ({ user: { id, user, tweets, followers, avatar } }) => {
       </div>
       <div className={css.info}>
         <p className={css.tweets}>{tweets} tweets</p>
-        <p className={css.followers}>{followers} followers</p>
+        <p className={css.followers}>{formatFollowers(followers)} followers</p>
         {!isFollowed() ? (
           <button
             type="button"
