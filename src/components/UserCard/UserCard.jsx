@@ -8,6 +8,10 @@ import PropTypes from "prop-types";
 
 import css from "./UserCard.module.css";
 
+// const formatFollowers = (number) => {
+//   return String(number).
+// }
+
 export const UserCard = ({ user: { id, user, tweets, followers, avatar } }) => {
   const dispatch = useDispatch();
   const followings = useSelector(selectFollowings);
