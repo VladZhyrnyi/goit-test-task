@@ -74,6 +74,14 @@ body {
   background-color: #766A92;
 }
 
+.container {
+  width: 1200px;
+  margin: 0 auto;
+  padding: 15px;
+
+  text-align: center;
+}
+
 .about {
   height: 100%;
   padding: 200px 120px;
@@ -126,13 +134,7 @@ body {
   background: #5cd3a8;
 }
 
-.container {
-  width: 1200px;
-  margin: 0 auto;
-  padding: 15px;
 
-  text-align: center;
-}
 
 .action-wrapper {
   margin-bottom: 20px;
